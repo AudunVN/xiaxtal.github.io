@@ -155,7 +155,10 @@
 					a.href = url;
 					a.download = filename;
 					a.click();
-					window.URL.revokeObjectURL(url);
+				    setTimeout(function(){
+				        document.body.removeChild(a);
+				        window.URL.revokeObjectURL(url);  
+				    }, 1000);
 		  	}
 
 		  	function add_to_zip(e, xhr, num, src){
