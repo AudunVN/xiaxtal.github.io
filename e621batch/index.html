@@ -42,7 +42,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" type="text/javascript" ></script>
 		<script type="text/javascript">
 		  window.onPageLoad = function(){
-			$("#query_box").prop("disabled", false);
+			$("#query_button").removeAttr("disabled");
 		  	var total_parts = "5";
 		  	function set_status(part, text){
 		  		$(".status").text("("+part+"/"+total_parts+") "+text);
